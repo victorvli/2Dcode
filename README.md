@@ -1,3 +1,3 @@
 # 2Dcode
 Generation and scanning of two-dimensional code
-¶şÎ¬ÂëµÄÉú³ÉºÍÉ¨Ãè
+äºŒç»´ç çš„ç”Ÿæˆä¸æ‰«æ
