@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="二维码生成与扫描" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTJ-d3-WaE">
+                                <rect key="frame" x="26" y="112" width="161.5" height="30"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="生成"/>
+                                <connections>
+                                    <action selector="createBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xAU-HE-aUY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moc-IP-BLo">
+                                <rect key="frame" x="187.5" y="112" width="161.5" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1311074505" blue="0.16553019199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="扫描"/>
+                                <connections>
+                                    <action selector="scanBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1cw-4A-2cZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  请输入要转换的数据" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXa-PI-RMd">
+                                <rect key="frame" x="54" y="47" width="268" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="t3E-2v-s7V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nhc-hJ-mcy">
+                                <rect key="frame" x="26" y="174" width="323" height="323"/>
+                                <color key="backgroundColor" red="0.86347365239999996" green="1" blue="0.68060444799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nhc-hJ-mcy" secondAttribute="height" multiplier="1:1" id="0nc-oW-88D"/>
+                                    <constraint firstAttribute="height" constant="268" id="4SD-hu-nxd"/>
+                                    <constraint firstAttribute="width" constant="268" id="dIv-io-9Cg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4SD-hu-nxd"/>
+                                        <exclude reference="dIv-io-9Cg"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9j-Dk-Kje">
+                                <rect key="frame" x="88" y="533" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.67843137249999996" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3d7-9R-he1"/>
+                                    <constraint firstAttribute="width" constant="200" id="yIL-R5-2Q9"/>
+                                </constraints>
+                                <state key="normal" title="识别">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recognizeQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eq5-sa-0GE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="moc-IP-BLo" firstAttribute="width" secondItem="tTJ-d3-WaE" secondAttribute="width" id="2Le-QE-F98"/>
+                            <constraint firstItem="moc-IP-BLo" firstAttribute="leading" secondItem="tTJ-d3-WaE" secondAttribute="trailing" id="3cW-0A-3iN"/>
+                            <constraint firstItem="moc-IP-BLo" firstAttribute="trailing" secondItem="nhc-hJ-mcy" secondAttribute="trailing" id="7JV-8d-qBQ"/>
+                            <constraint firstItem="Y9j-Dk-Kje" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A5D-vx-JH2"/>
+                            <constraint firstItem="moc-IP-BLo" firstAttribute="height" secondItem="tTJ-d3-WaE" secondAttribute="height" id="NGs-Ca-dOc"/>
+                            <constraint firstItem="moc-IP-BLo" firstAttribute="top" secondItem="CXa-PI-RMd" secondAttribute="bottom" constant="30" id="Zi2-f1-N6l"/>
+                            <constraint firstItem="tTJ-d3-WaE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="cQL-Vm-i9g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="moc-IP-BLo" secondAttribute="trailing" constant="10" id="dpg-Mz-Y3e"/>
+                            <constraint firstItem="CXa-PI-RMd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="iGt-DV-RAs"/>
+                            <constraint firstItem="nhc-hJ-mcy" firstAttribute="leading" secondItem="tTJ-d3-WaE" secondAttribute="leading" id="rhn-Lm-cq3"/>
+                            <constraint firstItem="nhc-hJ-mcy" firstAttribute="top" secondItem="moc-IP-BLo" secondAttribute="bottom" constant="32" id="s7k-sP-4Mp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CXa-PI-RMd" secondAttribute="trailing" constant="37" id="svz-RO-Eco"/>
+                            <constraint firstItem="CXa-PI-RMd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="tMH-cb-9dC"/>
+                            <constraint firstItem="tTJ-d3-WaE" firstAttribute="top" secondItem="CXa-PI-RMd" secondAttribute="bottom" constant="30" id="uIB-qL-CyF"/>
+                            <constraint firstItem="Y9j-Dk-Kje" firstAttribute="top" secondItem="nhc-hJ-mcy" secondAttribute="bottom" constant="36" id="zSi-s0-6NH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgV" destination="nhc-hJ-mcy" id="BB7-AU-T4D"/>
+                        <outlet property="textF" destination="CXa-PI-RMd" id="n8W-hU-NjS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="520.79999999999995" y="162.3688155922039"/>
+        </scene>
+    </scenes>
+</document>
